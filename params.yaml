@@ -1,3 +1,7 @@
 data_ingestion:
     test_size : 0.25
     url : "https://raw.githubusercontent.com/kunal-mallick/Energy_Production/main/resources/energy_production.csv"
+
+feature_engineering:
+    n_components : 5
+    random_state : 42

@@ -5,8 +5,8 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: 83b490ff4ad143484a191f9e3e393889
-      size: 153
+      md5: 3b9817af79d466c438cbce768b93f5d9
+      size: 222
     - path: src/data/data_ingestion.py
       hash: md5
       md5: cb6a09103a8e63461ff7b265fad3c5d5
@@ -44,3 +44,31 @@ stages:
       hash: md5
       md5: c8eceffca9a594b1cbd8a15770d60233
       size: 238661
+  feature_engineering:
+    cmd: python src/features/feature_engineering.py
+    deps:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 3322f78d9b129ec44d4932353ec2ec58
+      size: 79750
+    - path: data/processed/train.csv
+      hash: md5
+      md5: c8eceffca9a594b1cbd8a15770d60233
+      size: 238661
+    - path: params.yaml
+      hash: md5
+      md5: 3b9817af79d466c438cbce768b93f5d9
+      size: 222
+    - path: src/features/feature_engineering.py
+      hash: md5
+      md5: e737e487f3f957d2e9c5671861289a04
+      size: 6383
+    outs:
+    - path: data/interim/test_pca.csv
+      hash: md5
+      md5: aec9b60b678430f8b234f574b3dbe783
+      size: 254813
+    - path: data/interim/train_pca.csv
+      hash: md5
+      md5: a23fc4e69ce26559011748f72c4668bc
+      size: 762775
