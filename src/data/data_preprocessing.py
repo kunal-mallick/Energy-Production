@@ -9,7 +9,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("data_preprocessing.log"),
+        logging.FileHandler("log/data_preprocessing.log"),
         logging.StreamHandler()
     ]
 )

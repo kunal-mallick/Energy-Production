@@ -11,7 +11,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("data_ingestion.log"),
+        logging.FileHandler("log/data_ingestion.log"),
         logging.StreamHandler()
     ]
 )
